@@ -17,16 +17,20 @@ export const SocketProvider = ({ children }) => {
     return newId;
   });
 
-  useEffect(() => {
-    // Connect to your local backend
-    const newSocket = io('http://localhost:5000', {
-      query: { userId }
-    });
+useEffect(() => {
+  // 1. Get the URL from Vite environment variables, or fallback to localhost
+  const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
 
-    setSocket(newSocket);
+  // 2. Connect using the dynamic URL
+  const newSocket = io(backendUrl, {
+    query: { userId }
+  });
 
-    return () => newSocket.close();
-  }, [userId]);
+  setSocket(newSocket);
+
+  // Cleanup on unmount
+  return () => newSocket.close();
+}, [userId]);
 
   return (
     <SocketContext.Provider value={{ socket, userId }}>
