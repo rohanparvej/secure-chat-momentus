@@ -11,6 +11,8 @@
 
 A full-stack, real-time chat application built as an educational proof-of-concept. This project demonstrates web socket communication, monorepo architecture, cloud deployment, and frontend encryption principles.
 
+***⚠️Demo is only limited to alpha users or testers. This web-app/project is **not recommended** for production or **real world** use.⚠️***
+
 ## 🚀 Features
 
 * **Real-Time Messaging:** Instant communication powered by `Socket.io` with dynamic room creation.
