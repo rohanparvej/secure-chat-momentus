@@ -67,11 +67,11 @@ This application was developed strictly for educational purposes.
 └── README.md
 ```
 ## 💻 Local Development Setup
-* 1. Clone the repository
+* Clone the repository
 Bash
 git clone <>
 cd <secure-chat-momentus>
-* 2. Backend Setup
+* Backend Setup
 Bash
 cd backend
 npm install
@@ -85,12 +85,19 @@ FRONTEND_URL=http://localhost:5173
 Start server: npm run dev
 ```
 
-* 3. Frontend Setup
+* Frontend Setup
 Bash
 cd ../frontend
 npm install
-Create a .env.local file in the frontend folder:
+Create a .env.local file in the frontend folder.
 
-Code snippet
-VITE_BACKEND_URL=http://localhost:5000
-Start app: npm run dev
+## 🛡️ Security & Ethics Disclaimer
+**PLEASE READ: This application was developed strictly for educational and demonstration purposes only.**
+
+* Not for Production: This software is not intended for real-world use or the transmission of sensitive personal data.
+
+* No Liability: The author holds no responsibility for any misuse, data loss, or security breaches resulting from the deployment or modification of this code.
+
+* Encryption Limitations: While AES encryption is implemented via crypto-js, it is a basic proof-of-concept. It lacks advanced key management and rotational security required for production environments.
+
+* Authentication: This version focuses on real-time architecture; it does not include formal user authentication (JWT/OAuth), which would be necessary for any public-facing chat tool.
